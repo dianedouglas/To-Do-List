@@ -5,6 +5,7 @@ $(document).ready(function(){
     task.name = $("input#task-name").val();
     task.priority = $("select#task-priority").val();
     task.isDone = false;
+    task.person = $("input#person").val();
 
     $("ul.todo-list").append("<li><input type='checkbox'><span class='task'> " + task.name + "</span></li>");
     var currentTask = $(".task").last();
@@ -17,11 +18,23 @@ $(document).ready(function(){
       currentTask.addClass("lowPriority");
     }
 
-    $("#todo").show();
-    currentTask.click(function(){
-      // alert(task.name + task.priority + task.isDone);
+     var currentTaskCheckBox = $("input:checkbox").last().click(function(){
+        if(!task.isDone){
+          currentTask.addClass("done");
+          task.isDone = true;
+          alert("Yay! Task completed!");
+        } else{
+          currentTask.removeClass("done");
+          task.isDone = false;
+        }
+     })
 
-    })
+    $("#todo").show();
+
+    currentTask.dblclick(function(){
+      $(this).parent('li').remove();
+      alert("Current Task: " + task.name + "\n" + "Assigned to: " + task.person);
+    });
 
   });
 });
