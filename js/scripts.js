@@ -7,7 +7,7 @@ $(document).ready(function(){
     task.isDone = false;
     task.person = $("input#person").val();
 
-    $("ul.todo-list").append("<li><input type='checkbox'><span class='task'> " + task.name + "</span></li>");
+    $("ul.todo-list").append("<li><input type='checkbox'>"+ " " +"<span class='task'>" + task.name + "</span></li>");
     var currentTask = $(".task").last();
 
     if(task.priority === "High"){
