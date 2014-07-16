@@ -7,9 +7,20 @@ $(document).ready(function(){
     task.isDone = false;
 
     $("ul.todo-list").append("<li><span class='task'>" + task.name + "</span></li>");
+    var currentTask = $(".task").last();
+
+    if(task.priority === "High"){
+      currentTask.addClass("highPriority");
+    }else if(task.priority === "Med") {
+      currentTask.addClass("medPriority");
+    }else if(task.priority === "Low") {
+      currentTask.addClass("lowPriority");
+    }
+
     $("#todo").show();
-    $(".task").last().click(function(){
-      alert(task.name + task.priority + task.isDone);
+    currentTask.click(function(){
+      // alert(task.name + task.priority + task.isDone);
+
     })
 
   });

@@ -4,9 +4,26 @@
 
 .task{
   cursor: pointer;
-  color: #0088cc;
 }
 
 .task:hover {
+  color: #0088cc;
   text-decoration: underline;
 }
+
+.highPriority {
+  color: red;
+}
+
+.medPriority {
+  color: orange;
+}
+
+.lowPriority {
+  color: green;
+}
+
+/*ul
+{
+    list-style-type: none;
+}*/
