@@ -2,6 +2,10 @@
   display: none;
 }
 
+#details {
+  display: none;
+}
+
 .task{
   cursor: pointer;
 }

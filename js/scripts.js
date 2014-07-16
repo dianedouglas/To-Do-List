@@ -30,10 +30,17 @@ $(document).ready(function(){
      })
 
     $("#todo").show();
+    $("#details").show();
 
     currentTask.dblclick(function(){
       $(this).parent('li').remove();
-      alert("Current Task: " + task.name + "\n" + "Assigned to: " + task.person);
+      $('#details p').hide();
+    });
+
+    currentTask.click(function(){
+      $('#details p').show();
+      $('#details p.selectedTaskName').text("Current Task: " + task.name);
+      $('#details p.selectedTaskPerson').text("Assigned to: " + task.person);
     });
 
   });
