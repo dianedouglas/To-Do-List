@@ -6,5 +6,11 @@ $(document).ready(function(){
     task.priority = $("select#task-priority").val();
     task.isDone = false;
 
+    $("ul.todo-list").append("<li><span class='task'>" + task.name + "</span></li>");
+    $("#todo").show();
+    $(".task").last().click(function(){
+      alert(task.name + task.priority + task.isDone);
+    })
+
   });
 });
