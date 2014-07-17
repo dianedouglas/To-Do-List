@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/todolist2-styles.css">
+  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="js/todolist2-script.js"></script>
+  <title>New ToDo List</title>
+</head>
+<body>
+  <div class="container">
+    <h1>To do</h1>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="lists">
+          <h3>Lists</h3>
+          <ul>
+
+          </ul>
+        </div>
+
+        <h3>Create a list</h3>
+        <form id="create-list">
+          <div class="form-group">
+            <label for="list-name"></label>
+            <input id="list-name" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn">Create</button>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <div id="tasks">
+          <h3>Tasks</h3>
+          <ul>
+
+          </ul>
+        </div>
+
+        <h3>Create a task</h3>
+        <form id="create-task">
+          <div class="form-group">
+            <label for="task-name"></label>
+            <input id="task-name" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
