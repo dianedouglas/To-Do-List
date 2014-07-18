@@ -16,17 +16,17 @@ $(document).ready(function() {
     //set the list display on the right here.
 
     $("input#list-name").val("");
-
-      $("#tasks ul").empty();
+    $("#tasks ul").empty();
 
     $("#lists ul li").last().click(function(){
       $("#tasks ul").empty();
-      // var currentListItem = $(this);
       var index = $("#lists ul li").index($(this));
       currentList = allLists[index];
+      //currentList = list;
       currentList.tasks.forEach(function(task){
         $("#tasks ul").append("<li>" + task + "</li>");
       })
+
     })
   })
 
