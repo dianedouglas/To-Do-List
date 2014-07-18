@@ -5,3 +5,14 @@
 #tasks {
   display:none;
 }
+
+#lists ul li span {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#lists ul li span:hover {
+  text-decoration: underline;
+}
+
+
